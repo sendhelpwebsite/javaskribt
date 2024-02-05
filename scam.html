@@ -1,18 +1,47 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8"/>
-	<title>phishing</title>
-	<link rel="stylesheet" href="styles.css"/>
+    <title>php didn't work lol</title>
+	<link rel="stylesheet" href="styles.css" />
+	<style>
+		#result {text-align: center; padding-top: 15px;}
+	</style>
 </head>
 <body>
-	<div>
-		<h1>witamy w oszustwie typu phishing!</h1>
-		<center>
-		<form action="phishing.php" method="get">
-			discord username: <input type="text" name="username"><br>
-			<input type="submit">
-		</form>
-		</center>
-	</div>
+
+<div>
+	<h1>witamy w oszustwie typu phishing</h1>
+	<center>
+    <form id="scamform">
+        <label for="username">discord username:</label>
+        <input type="text" id="username" name="username"><br>
+        <input type="submit" value="uzyskać kradzież tożsamości">
+    </form>
+	</center>
+
+    <div id="result"></div>
+
+	<script>
+        document.getElementById("scamform").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Retrieve form data
+            var name = document.getElementById("username").value;
+
+            // Process form data
+            var resultElement = document.getElementById("result");
+            if (name === "kaczka20092") {
+                resultElement.textContent = "nice facebook pfp";
+            } else if (name === "ossisis") {
+                resultElement.textContent = "bro can't speak English lmao";
+            } else if (name === "x10p") {
+                resultElement.textContent = "identity theft is a serious crime";
+            } else {
+                resultElement.textContent = "your details aren't even worth stealing lol";
+            }
+        });
+    </script>
+</div>
+
 </body>
 </html>
