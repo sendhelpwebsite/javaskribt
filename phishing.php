@@ -10,7 +10,7 @@
 
 <div>
 <?php
-$name=$_POST["username"];
+$name=$_GET["username"];
 $name=htmlspecialchars($data);
 if ($name=="kaczka20092") {
 	echo "nice facebook pfp";
